@@ -67,7 +67,7 @@
       <li>RIR: Room Impulse Response</li>
     </ul>
 
-    <p>Room-Array Setup:</p>
+    <p>Room-Array Configurations:</p>
     <ul>
       <li>Room Dimension: 8.3 x 6.5 x 2.9 m</li>
       <li>Array Type: 32-element rigid Spherical Microphone Array (em32 Eigenmike®, 4.2cm radius)</li>
@@ -76,9 +76,9 @@
 
     <p>Datasets:</p>
     <ul>
-      <li>Measured RIR Dataset: Orhun Olgun, & Huseyin Hacihabiboglu. (2019). METU SPARG Eigenmike em32 Acoustic Impulse Response Dataset v0.1.0 (Version 0.1.0) [Data set]. Zenodo. <a href="http://doi.org/10.5281/zenodo.2635758" target="_blank">[Online]</a></li>
-      <li>Simulated RIR: D. P. Jarrett, “Spherical   Microphone   array   ImpulseResponse  (SMIR)  generator.”  <a href="http://www.ee.ic.ac.uk/sap/smirgen/" target="_blank">[Online]</a>
-      <li>Raw Speeches: The Open Speech Repository. <a href="http://www.voiptroubleshooter.com/open_speech/" target="_blank">http://www.voiptroubleshooter.com/open_speech/</a></li>
+        <li>Raw Speeches: The Open Speech Repository. <a href="http://www.voiptroubleshooter.com/open_speech/" target="_blank">[Online]</a></li>
+        <li>Measured RIR Dataset: Orhun Olgun, & Huseyin Hacihabiboglu. (2019). METU SPARG Eigenmike em32 Acoustic Impulse Response Dataset v0.1.0 (Version 0.1.0) [Dataset]. Zenodo. <a href="http://doi.org/10.5281/zenodo.2635758" target="_blank">[Online]</a></li>
+        <li>Simulated RIR: D. P. Jarrett, “Spherical   Microphone   array   Impulse Response  (SMIR)  generator.”  <a href="http://www.ee.ic.ac.uk/sap/smirgen/" target="_blank">[Online]</a></li>
     </ul>
     
     <h2> A. Varying separation & noise (based on measured RIR) </h2>
@@ -89,29 +89,30 @@
       <button class="tablinks" onclick="openCity(event, 'A1')" id="defaultOpen">Case A.1</button>
       <button class="tablinks" onclick="openCity(event, 'A2')">Case A.2</button>
       <button class="tablinks" onclick="openCity(event, 'A3')">Case A.3</button>
-      </button>
+      <button class="tablinks" onclick="openCity(event, 'A4v')">Case A.4 (Video Only)</button>
     </div>
 
     <div id="A1" class="tabcontent">
       <p>Separation: 27<span>&#176;</span>, SIR: -5 dB, SBNR: 10 dB</p>
       <div class="player">
-          <ts-track title="Target">
-              <ts-source src="audio/realSPARG038_nSrc_2_babble_10dB_SIR_-5dB_sep_27_range_1.0m/target.wav"></ts-source>
+          <img class="seekable" data-seek-margin-left="13.3" data-seek-margin-right="6" src="image/realSPARG038_nSrc_2_babble_10dB_SIR_-5dB_sep_27_range_1.0m/Target.jpg">
+          <ts-track title="Target" data-img="image/realSPARG038_nSrc_2_babble_10dB_SIR_-5dB_sep_27_range_1.0m/Target.jpg">
+              <ts-source src="audio/realSPARG038_nSrc_2_babble_10dB_SIR_-5dB_sep_27_range_1.0m/target.wav" type="audio/wav"></ts-source>
               
-          <ts-track title="Passthrough">
-              <ts-source src="audio/realSPARG038_nSrc_2_babble_10dB_SIR_-5dB_sep_27_range_1.0m/enhanced_passthrough.wav"></ts-source>
+          <ts-track title="Passthrough" data-img="image/realSPARG038_nSrc_2_babble_10dB_SIR_-5dB_sep_27_range_1.0m/Passthrough.jpg">
+              <ts-source src="audio/realSPARG038_nSrc_2_babble_10dB_SIR_-5dB_sep_27_range_1.0m/enhanced_passthrough.wav" type="audio/wav"></ts-source>
           
-          <ts-track title="Isotropic">
-              <ts-source src="audio/realSPARG038_nSrc_2_babble_10dB_SIR_-5dB_sep_27_range_1.0m/enhanced_iso3w3_conNum_100_tau_0.05.wav"></ts-source>
+          <ts-track title="Isotropic" data-img="image/realSPARG038_nSrc_2_babble_10dB_SIR_-5dB_sep_27_range_1.0m/Iso.jpg">
+              <ts-source src="audio/realSPARG038_nSrc_2_babble_10dB_SIR_-5dB_sep_27_range_1.0m/enhanced_iso3w3_conNum_100_tau_0.05.wav" type="audio/wav"></ts-source>
           
-          <ts-track title="Compact (Proposed)">
-              <ts-source src="audio/realSPARG038_nSrc_2_babble_10dB_SIR_-5dB_sep_27_range_1.0m/enhanced_1pw_iso_white3_lim2_conNum_100_tau_0.05.wav"></ts-source>
+          <ts-track title="Compact (Proposed)" data-img="image/realSPARG038_nSrc_2_babble_10dB_SIR_-5dB_sep_27_range_1.0m/Compact.jpg">
+              <ts-source src="audio/realSPARG038_nSrc_2_babble_10dB_SIR_-5dB_sep_27_range_1.0m/enhanced_1pw_iso_white3_lim2_conNum_100_tau_0.05.wav" type="audio/wav"></ts-source>
           
-          <ts-track title="MPDR">
-              <ts-source src="audio/realSPARG038_nSrc_2_babble_10dB_SIR_-5dB_sep_27_range_1.0m/enhanced_mpdr_online_conNum_100_tau_0.05.wav"></ts-source>
+          <ts-track title="MPDR" data-img="image/realSPARG038_nSrc_2_babble_10dB_SIR_-5dB_sep_27_range_1.0m/MPDR.jpg">
+              <ts-source src="audio/realSPARG038_nSrc_2_babble_10dB_SIR_-5dB_sep_27_range_1.0m/enhanced_mpdr_online_conNum_100_tau_0.05.wav" type="audio/wav"></ts-source>
           
-          <ts-track title="Oracle">
-              <ts-source src="audio/realSPARG038_nSrc_2_babble_10dB_SIR_-5dB_sep_27_range_1.0m/enhanced_oracle_conNum_100_tau_0.05.wav"></ts-source>
+          <ts-track title="Oracle" data-img="image/realSPARG038_nSrc_2_babble_10dB_SIR_-5dB_sep_27_range_1.0m/Oracle.jpg">
+              <ts-source src="audio/realSPARG038_nSrc_2_babble_10dB_SIR_-5dB_sep_27_range_1.0m/enhanced_oracle_conNum_100_tau_0.05.wav" type="audio/wav"></ts-source>
       </div>
     </div>
 
@@ -119,22 +120,22 @@
       <p>Separation: 27<span>&#176;</span>, SIR: 0 dB, SBNR: 20 dB</p>
       <div class="player">
           <ts-track title="Target">
-              <ts-source src="audio/realSPARG005_nSrc_2_babble_20dB_SIR_0dB_sep_27_range_1.0m/target.wav"></ts-source>
+              <ts-source src="audio/realSPARG005_nSrc_2_babble_20dB_SIR_0dB_sep_27_range_1.0m/target.wav" type="audio/wav"></ts-source>
               
           <ts-track title="Passthrough">
-              <ts-source src="audio/realSPARG005_nSrc_2_babble_20dB_SIR_0dB_sep_27_range_1.0m/enhanced_passthrough.wav"></ts-source>
+              <ts-source src="audio/realSPARG005_nSrc_2_babble_20dB_SIR_0dB_sep_27_range_1.0m/enhanced_passthrough.wav" type="audio/wav"></ts-source>
           
           <ts-track title="Isotropic">
-              <ts-source src="audio/realSPARG005_nSrc_2_babble_20dB_SIR_0dB_sep_27_range_1.0m/enhanced_iso3w3_conNum_100_tau_0.05.wav"></ts-source>
+              <ts-source src="audio/realSPARG005_nSrc_2_babble_20dB_SIR_0dB_sep_27_range_1.0m/enhanced_iso3w3_conNum_100_tau_0.05.wav" type="audio/wav"></ts-source>
           
           <ts-track title="Compact (Proposed)">
-              <ts-source src="audio/realSPARG005_nSrc_2_babble_20dB_SIR_0dB_sep_27_range_1.0m/enhanced_1pw_iso_white3_lim2_conNum_100_tau_0.05.wav"></ts-source>
+              <ts-source src="audio/realSPARG005_nSrc_2_babble_20dB_SIR_0dB_sep_27_range_1.0m/enhanced_1pw_iso_white3_lim2_conNum_100_tau_0.05.wav" type="audio/wav"></ts-source>
           
           <ts-track title="MPDR">
-              <ts-source src="audio/realSPARG005_nSrc_2_babble_20dB_SIR_0dB_sep_27_range_1.0m/enhanced_mpdr_online_conNum_100_tau_0.05.wav"></ts-source>
+              <ts-source src="audio/realSPARG005_nSrc_2_babble_20dB_SIR_0dB_sep_27_range_1.0m/enhanced_mpdr_online_conNum_100_tau_0.05.wav" type="audio/wav"></ts-source>
           
           <ts-track title="Oracle">
-              <ts-source src="audio/realSPARG005_nSrc_2_babble_20dB_SIR_0dB_sep_27_range_1.0m/enhanced_oracle_conNum_100_tau_0.05.wav"></ts-source>
+              <ts-source src="audio/realSPARG005_nSrc_2_babble_20dB_SIR_0dB_sep_27_range_1.0m/enhanced_oracle_conNum_100_tau_0.05.wav" type="audio/wav"></ts-source>
       </div>
     </div>
 
@@ -142,23 +143,27 @@
       <p>Separation: 45<span>&#176;</span>, SIR: -10 dB, SBNR: 20 dB</p>
       <div class="player">
           <ts-track title="Target">
-              <ts-source src="audio/realSPARG077_nSrc_2_babble_20dB_SIR_-10dB_sep_45_range_1.0m/target.wav"></ts-source>
+              <ts-source src="audio/realSPARG077_nSrc_2_babble_20dB_SIR_-10dB_sep_45_range_1.0m/target.wav" type="audio/wav"></ts-source>
               
           <ts-track title="Passthrough">
-              <ts-source src="audio/realSPARG077_nSrc_2_babble_20dB_SIR_-10dB_sep_45_range_1.0m/enhanced_passthrough.wav"></ts-source>
+              <ts-source src="audio/realSPARG077_nSrc_2_babble_20dB_SIR_-10dB_sep_45_range_1.0m/enhanced_passthrough.wav" type="audio/wav"></ts-source>
           
           <ts-track title="Isotropic">
-              <ts-source src="audio/realSPARG077_nSrc_2_babble_20dB_SIR_-10dB_sep_45_range_1.0m/enhanced_iso3w3_conNum_100_tau_0.05.wav"></ts-source>
+              <ts-source src="audio/realSPARG077_nSrc_2_babble_20dB_SIR_-10dB_sep_45_range_1.0m/enhanced_iso3w3_conNum_100_tau_0.05.wav" type="audio/wav"></ts-source>
           
           <ts-track title="Compact (Proposed)">
-              <ts-source src="audio/realSPARG077_nSrc_2_babble_20dB_SIR_-10dB_sep_45_range_1.0m/enhanced_1pw_iso_white3_lim2_conNum_100_tau_0.05.wav"></ts-source>
+              <ts-source src="audio/realSPARG077_nSrc_2_babble_20dB_SIR_-10dB_sep_45_range_1.0m/enhanced_1pw_iso_white3_lim2_conNum_100_tau_0.05.wav" type="audio/wav"></ts-source>
           
           <ts-track title="MPDR">
-              <ts-source src="audio/realSPARG077_nSrc_2_babble_20dB_SIR_-10dB_sep_45_range_1.0m/enhanced_mpdr_online_conNum_100_tau_0.05.wav"></ts-source>
+              <ts-source src="audio/realSPARG077_nSrc_2_babble_20dB_SIR_-10dB_sep_45_range_1.0m/enhanced_mpdr_online_conNum_100_tau_0.05.wav" type="audio/wav"></ts-source>
           
           <ts-track title="Oracle">
-              <ts-source src="audio/realSPARG077_nSrc_2_babble_20dB_SIR_-10dB_sep_45_range_1.0m/enhanced_oracle_conNum_100_tau_0.05.wav"></ts-source>
+              <ts-source src="audio/realSPARG077_nSrc_2_babble_20dB_SIR_-10dB_sep_45_range_1.0m/enhanced_oracle_conNum_100_tau_0.05.wav" type="audio/wav"></ts-source>
       </div>
+    </div>
+    
+    <div id="A4v" class="tabcontent">
+      <p> To add.. </p>
     </div>
     
     
@@ -170,76 +175,84 @@
       <button class="tablinks" onclick="openCity(event, 'B1')" id="defaultOpen">Case B.1</button>
       <button class="tablinks" onclick="openCity(event, 'B2')">Case B.2</button>
       <button class="tablinks" onclick="openCity(event, 'B3')">Case B.3</button>
+      <button class="tablinks" onclick="openCity(event, 'B4v')">Case B.4 (Video Only)</button>
       </button>
     </div>
 
     <div id="B1" class="tabcontent">
-      <p>T<sub>60</sub>=0.2 s, C<sub>50</sub>=27.5 dB</p>
+      <p>T<sub>60</sub>: 0.2 s, C<sub>50</sub>: 27.5 dB</p>
       <div class="player">
           <ts-track title="Target">
-              <ts-source src="audio/simSPARG003_nSrc_2_RT_0.2_babble_15dB_SIR_-5dB_sep_15_range_0.5m/target.wav"></ts-source>
+              <ts-source src="audio/simSPARG003_nSrc_2_RT_0.2_babble_15dB_SIR_-5dB_sep_15_range_0.5m/target.wav" type="audio/wav"></ts-source>
               
           <ts-track title="Passthrough">
-              <ts-source src="audio/simSPARG003_nSrc_2_RT_0.2_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_passthrough.wav"></ts-source>
+              <ts-source src="audio/simSPARG003_nSrc_2_RT_0.2_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_passthrough.wav" type="audio/wav"></ts-source>
           
           <ts-track title="Isotropic">
-              <ts-source src="audio/simSPARG003_nSrc_2_RT_0.2_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_iso3w3_conNum_100_tau_0.05.wav"></ts-source>
+              <ts-source src="audio/simSPARG003_nSrc_2_RT_0.2_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_iso3w3_conNum_100_tau_0.05.wav" type="audio/wav"></ts-source>
           
           <ts-track title="Compact (Proposed)">
-              <ts-source src="audio/simSPARG003_nSrc_2_RT_0.2_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_1pw_iso_white3_lim2_conNum_100_tau_0.05.wav"></ts-source>
+              <ts-source src="audio/simSPARG003_nSrc_2_RT_0.2_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_1pw_iso_white3_lim2_conNum_100_tau_0.05.wav" type="audio/wav"></ts-source>
           
           <ts-track title="MPDR">
-              <ts-source src="audio/simSPARG003_nSrc_2_RT_0.2_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_mpdr_online_conNum_100_tau_0.05.wav"></ts-source>
+              <ts-source src="audio/simSPARG003_nSrc_2_RT_0.2_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_mpdr_online_conNum_100_tau_0.05.wav" type="audio/wav"></ts-source>
           
           <ts-track title="Oracle">
-              <ts-source src="audio/simSPARG003_nSrc_2_RT_0.2_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_oracle_conNum_100_tau_0.05.wav"></ts-source>
+              <ts-source src="audio/simSPARG003_nSrc_2_RT_0.2_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_oracle_conNum_100_tau_0.05.wav" type="audio/wav"></ts-source>
       </div>
     </div>
 
     <div id="B2" class="tabcontent">
-      <p>T<sub>60</sub>=0.5 s, C<sub>50</sub>=9.0 dB</p>
+      <p>T<sub>60</sub>: 0.5 s, C<sub>50</sub>: 9.0 dB</p>
       <div class="player">
           <ts-track title="Target">
-              <ts-source src="audio/simSPARG003_nSrc_2_RT_0.5_babble_15dB_SIR_-5dB_sep_15_range_0.5m/target.wav"></ts-source>
+              <ts-source src="audio/simSPARG003_nSrc_2_RT_0.5_babble_15dB_SIR_-5dB_sep_15_range_0.5m/target.wav" type="audio/wav"></ts-source>
               
           <ts-track title="Passthrough">
-              <ts-source src="audio/simSPARG003_nSrc_2_RT_0.5_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_passthrough.wav"></ts-source>
+              <ts-source src="audio/simSPARG003_nSrc_2_RT_0.5_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_passthrough.wav" type="audio/wav"></ts-source>
           
           <ts-track title="Isotropic">
-              <ts-source src="audio/simSPARG003_nSrc_2_RT_0.5_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_iso3w3_conNum_100_tau_0.05.wav"></ts-source>
+              <ts-source src="audio/simSPARG003_nSrc_2_RT_0.5_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_iso3w3_conNum_100_tau_0.05.wav" type="audio/wav"></ts-source>
           
           <ts-track title="Compact (Proposed)">
-              <ts-source src="audio/simSPARG003_nSrc_2_RT_0.5_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_1pw_iso_white3_lim2_conNum_100_tau_0.05.wav"></ts-source>
+              <ts-source src="audio/simSPARG003_nSrc_2_RT_0.5_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_1pw_iso_white3_lim2_conNum_100_tau_0.05.wav" type="audio/wav"></ts-source>
           
           <ts-track title="MPDR">
-              <ts-source src="audio/simSPARG003_nSrc_2_RT_0.5_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_mpdr_online_conNum_100_tau_0.05.wav"></ts-source>
+              <ts-source src="audio/simSPARG003_nSrc_2_RT_0.5_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_mpdr_online_conNum_100_tau_0.05.wav" type="audio/wav"></ts-source>
           
           <ts-track title="Oracle">
-              <ts-source src="audio/simSPARG003_nSrc_2_RT_0.5_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_oracle_conNum_100_tau_0.05.wav"></ts-source>
+              <ts-source src="audio/simSPARG003_nSrc_2_RT_0.5_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_oracle_conNum_100_tau_0.05.wav" type="audio/wav"></ts-source>
       </div>
     </div>
 
     <div id="B3" class="tabcontent">
-      <p>T<sub>60</sub>=1.0 s, C<sub>50</sub>=2.0 dB</p>
+      <p>T<sub>60</sub>: 1.0 s, C<sub>50</sub>: 2.0 dB</p>
       <div class="player">
           <ts-track title="Target">
-              <ts-source src="audio/simSPARG019_nSrc_2_RT_1.0_babble_15dB_SIR_-5dB_sep_15_range_0.5m/target.wav"></ts-source>
+              <ts-source src="audio/simSPARG019_nSrc_2_RT_1.0_babble_15dB_SIR_-5dB_sep_15_range_0.5m/target.wav" type="audio/wav"></ts-source>
               
           <ts-track title="Passthrough">
-              <ts-source src="audio/simSPARG019_nSrc_2_RT_1.0_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_passthrough.wav"></ts-source>
+              <ts-source src="audio/simSPARG019_nSrc_2_RT_1.0_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_passthrough.wav" type="audio/wav"></ts-source>
           
           <ts-track title="Isotropic">
-              <ts-source src="audio/simSPARG019_nSrc_2_RT_1.0_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_iso3w3_conNum_100_tau_0.05.wav"></ts-source>
+              <ts-source src="audio/simSPARG019_nSrc_2_RT_1.0_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_iso3w3_conNum_100_tau_0.05.wav" type="audio/wav"></ts-source>
           
           <ts-track title="Compact (Proposed)">
-              <ts-source src="audio/simSPARG019_nSrc_2_RT_1.0_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_1pw_iso_white3_lim2_conNum_100_tau_0.05.wav"></ts-source>
+              <ts-source src="audio/simSPARG019_nSrc_2_RT_1.0_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_1pw_iso_white3_lim2_conNum_100_tau_0.05.wav" type="audio/wav"></ts-source>
           
           <ts-track title="MPDR">
-              <ts-source src="audio/simSPARG019_nSrc_2_RT_1.0_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_mpdr_online_conNum_100_tau_0.05.wav"></ts-source>
+              <ts-source src="audio/simSPARG019_nSrc_2_RT_1.0_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_mpdr_online_conNum_100_tau_0.05.wav" type="audio/wav"></ts-source>
           
           <ts-track title="Oracle">
-              <ts-source src="audio/simSPARG019_nSrc_2_RT_1.0_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_oracle_conNum_100_tau_0.05.wav"></ts-source>
+              <ts-source src="audio/simSPARG019_nSrc_2_RT_1.0_babble_15dB_SIR_-5dB_sep_15_range_0.5m/enhanced_oracle_conNum_100_tau_0.05.wav" type="audio/wav"></ts-source>
       </div>
+    </div>
+    
+    <div id="B4v" class="tabcontent">
+      <p>T<sub>60</sub>: 0.2 s, C<sub>50</sub>: 27.5 dB</p>
+      <video width="960" height="720" autoplay controls loop>
+       <source src="video/Beamformers4.mp4" type="video/mp4">
+     </video>
     </div>
     
 
@@ -270,6 +283,7 @@
        var settings = {
            onlyradiosolo: true,
            repeat: true,
+           tabview: true,
           };
         jQuery(".player").trackSwitch(settings); // All other players are default
     });
